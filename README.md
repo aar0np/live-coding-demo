@@ -165,10 +165,51 @@ Go to the [Spring Initializr](https://start.spring.io/).
  - Name the project metadata as you wish.
  - Leave packaging as "Jar"
  - Leave Java as 17
- 
+
 Dependencies:
  - Spring Web
  - Vaadin
  - Spring Data Cassandra
 
-Note: The `pom.xml` should be out here shortly.
+Click the "Generate" button.  Download the zip file, unzip it, and import it as an existing Maven project into your IDE.
+
+Once that's done, add the dependency for the Astra SDK to the pom.xml dependency section.  In the pom.xml you'll find that it's after the `spring-boot-starter-data-cassandra` dependency.
+
+```xml
+<dependency>
+  <groupId>com.datastax.astra</groupId>
+  <artifactId>astra-spring-boot-starter</artifactId>
+  <version>0.3.4</version>
+</dependency>
+```
+
+
+## 5. Running
+
+From the project root directory, execute the following:
+
+```bash
+mvn spring-boot:run
+```
+
+It will take a while for Vaadin to build its local files for the UI.  It will run in the foreground (without returning to the prompt).  Look for the following message to determine if Vaadin is ready:
+
+```bash
+----------------- Frontend compiled successfully. -----------------
+Started Vite. Time: 4035ms
+➜  Local:   http:
+.env
+//127.0.0.1:55966/VAADIN/
+```
+
+Local application website: http://localhost:8080/
+
+GET request via a browser: http://localhost:8080/nerdholidays/year/2023
+
+POST request via command line w/ curl:
+
+```bash
+curl -XPOST -s http://localhost:8080/nerdholidays/create \\
+    -d '{"name":"Batman Day","eventDate":"2023-09-26"}'
+    -H 'Content-Type: application/json'
+```
