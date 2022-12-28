@@ -1,0 +1,4 @@
+set ASTRA_DB_ID=
+set ASTRA_DB_REGION=
+set ASTRA_DB_APP_TOKEN=
+set ASTRA_DB_KEYSPACE=live_coding
