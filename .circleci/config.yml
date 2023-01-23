@@ -8,15 +8,18 @@ jobs:
   build-and-test:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-    docker:
-      - image: cimg/base:stable
+    machine:
+      image: ubuntu-2004:202101-01
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
       - run:
-          name: "Maven"
-          command: mvn clean install
+          name: Maven build
+          command: mvn -B -DskipTests clean package
+      - run:
+          name: Test
+          command: mvn test
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
