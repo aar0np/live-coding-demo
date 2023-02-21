@@ -183,7 +183,6 @@ Once that's done, add the dependency for the Astra SDK to the pom.xml dependency
 </dependency>
 ```
 
-
 ## 5. Running
 
 From the project root directory, execute the following:
@@ -213,3 +212,9 @@ curl -XPOST -s http://localhost:8080/nerdholidays/create \\
     -d '{"name":"Batman Day","eventDate":"2023-09-26"}'
     -H 'Content-Type: application/json'
 ```
+
+6. GitPod
+
+Just in case you want to run this in GitPod, we have a link for that, too!
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/aar0np/live-coding-exercise)
