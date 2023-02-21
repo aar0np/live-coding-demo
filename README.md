@@ -216,4 +216,5 @@ curl -XPOST -s http://localhost:8080/nerdholidays/create \\
 6. GitPod
 
 Just in case you want to run this in GitPod, we have a link for that, too!
+
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/aar0np/live-coding-exercise)
