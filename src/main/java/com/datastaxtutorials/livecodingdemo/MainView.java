@@ -17,6 +17,8 @@ import com.vaadin.flow.router.Route;
 @Route("")
 public class MainView extends VerticalLayout {
 
+	private static final long serialVersionUID = -4305152363115052956L;
+
 	private TextField eventName = new TextField("Event name");
 	private TextField eventDate = new TextField("Event date");
 	
@@ -49,6 +51,7 @@ public class MainView extends VerticalLayout {
 			
 			holidayController.saveNewHoliday(holiday);
 			clearFields();
+			refreshGrid();
 		});
 		
 		return layout;
