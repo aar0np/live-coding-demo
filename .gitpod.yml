@@ -20,8 +20,12 @@ tasks:
       rm src/main/java/com/datastaxtutorials/livecodingdemo/HolidayController.java
       mv src/main/java/com/datastaxtutorials/livecodingdemo/HolidayController.java_empty src/main/java/com/datastaxtutorials/livecodingdemo/HolidayController.java
 
+      rm src/main/java/com/datastaxtutorials/livecodingdemo/MainView.java
+      mv src/main/java/com/datastaxtutorials/livecodingdemo/MainView.java_empty src/main/java/com/datastaxtutorials/livecodingdemo/MainView.java
+
+      # astra cli
       source /home/gitpod/.astra/cli/astra-init.sh
-      # astra setup
+
 ports:
   - port: 8080
     onOpen: open-browser
