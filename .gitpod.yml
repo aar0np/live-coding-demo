@@ -15,6 +15,11 @@ tasks:
     command: |
       gp open README.md
       unset JAVA_TOOL_OPTIONS
+
+      # prep files for workshop
+      rm src/main/java/com/datastaxtutorials/livecodingdemo/HolidayController.java
+      mv src/main/java/com/datastaxtutorials/livecodingdemo/HolidayController.java_empty src/main/java/com/datastaxtutorials/livecodingdemo/HolidayController.java
+
       source /home/gitpod/.astra/cli/astra-init.sh
       # astra setup
 ports:
