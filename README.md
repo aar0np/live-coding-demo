@@ -128,6 +128,8 @@ INSERT INTO nerd_holidays (year_bucket, event_date, id, name)
 VALUES (2023,20231130,UUID(),'Computer Security Day');
 INSERT INTO nerd_holidays (year_bucket, event_date, id, name)
 VALUES (2023,20231221,UUID(),'Rush 2112 Day');
+INSERT INTO nerd_holidays (year_bucket, event_date, id, name)
+VALUES (2023,20230403,UUID(),'Pac-Man Day');
 ```
 
 ## 3. The `.env` File
